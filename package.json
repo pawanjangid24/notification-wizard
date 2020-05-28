@@ -1,0 +1,53 @@
+{
+  "name": "react-notification-system",
+  "version": "1.0.0",
+  "description": "A React Notification Wizard",
+  "main": "dist/NotificationSystem.js",
+  "scripts": {
+    "prepare-build": "npm run lint && rimraf dist/",
+    "prebuild": "npm run prepare-build",
+    "build": "jsx -x jsx ./src ./dist & jsx ./src ./dist && webpack --stats --config webpack.config.umd.prod.js && webpack --stats --config webpack.config.umd.dev.js",
+    "start": "node devServer.js",
+    "dev": "nodemon devServer.js",
+    "build:example": "rimraf example/build/ && webpack --stats --config webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "prop-types": "^15.5.6"
+  },
+  "peerDependencies": {
+    "react": "0.14.x || ^15.0.0 || ^16.0.0",
+    "react-dom": "0.14.x || ^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-react-class-display-name": "^0.1.0",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-airbnb": "^2.0.0",
+    "css-loader": "^0.24.0",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "isparta-loader": "^1.0.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-tools": "^0.13.2",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
+    "rimraf": "^2.4.3",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.4.1"
+  }
+}
