@@ -35,7 +35,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "isparta-loader": "^1.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
